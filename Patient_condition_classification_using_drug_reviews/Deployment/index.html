@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Medical Review Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #006d77;
+            --secondary: #83c5be;
+            --background: #edf6f9;
+            --text-dark: #023047;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #d8f3dc, #b7e4c7);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 30px 40px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        select, textarea, input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border 0.3s ease;
+        }
+
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004e58;
+        }
+
+        h2, h3 {
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .result {
+            background-color: #e8f6f3;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: #d62828;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        function updateDrugOptions() {
+            const condition = document.getElementById("condition").value;
+            const drugSelect = document.getElementById("drug");
+            const drugOptions = {{ condition_drug_map | tojson }};
+            drugSelect.innerHTML = "";
+
+            drugOptions[condition].forEach(drug => {
+                const option = document.createElement("option");
+                option.value = drug;
+                option.text = drug;
+                drugSelect.add(option);
+            });
+        }
+
+        window.onload = function () {
+            updateDrugOptions();
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>🩺 Smart Medical Review Analyzer</h1>
+    </header>
+
+    <main>
+        <form method="POST" action="/predict">
+            <label for="condition">Select Condition:</label>
+            <select id="condition" name="condition" onchange="updateDrugOptions()" required>
+                {% for cond in condition_drug_map %}
+                    <option value="{{ cond }}" {% if cond == condition %}selected{% endif %}>{{ cond }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="drug">Select Drug:</label>
+            <select id="drug" name="drug" required></select>
+
+            <label for="review">Write Your Review:</label>
+            <textarea id="review" name="review" rows="5" required>{{ review or '' }}</textarea>
+
+            <input type="submit" value="Predict Sentiment">
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2 class="{{ prediction }}">{{ prediction|capitalize }} Sentiment</h2>
+
+                {% if prediction == 'negative' %}
+                    <h3>🔄 Alternative Medicines for <strong>{{ condition }}</strong>:</h3>
+                    <ul>
+                        {% for med in alternatives %}
+                            <li>{{ med }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p style="color: #b00020; font-size: 0.9rem; margin-top: 15px;">
+                        ⚠️ <strong>Disclaimer:</strong> These suggestions are based on data trends and should not replace professional medical advice. Always consult your doctor or pharmacist before changing any medication.
+                    </p>
+                {% else %}
+                    <p class="positive">✅ Great! Your experience with <strong>{{ drug }}</strong> seems positive.</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </main>
+
+    <footer>
+        &copy; 2025 Smart MedAI • Designed for better health decisions.
+    </footer>
+</body>
+</html>
