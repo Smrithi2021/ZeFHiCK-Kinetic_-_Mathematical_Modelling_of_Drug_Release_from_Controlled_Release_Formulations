@@ -1,0 +1,13 @@
+The Cancer Genome Atlas (TCGA) BRCA cohort consists of over 1,000 breast
+cancer samples with multi-omics profiling, including RNA sequencing,
+mutation data, copy number variation, and clinical metadata.
+
+TCGA-BRCA data has been extensively used to study molecular subtypes,
+tumor heterogeneity, and biomarker discovery. RNA-seq data enables
+expression-based classification such as PAM50.
+
+The dataset provides a standardized reference for developing and validating
+machine learning models in oncology research.
+
+TCGA findings have contributed significantly to understanding breast cancer
+biology and improving patient stratification.

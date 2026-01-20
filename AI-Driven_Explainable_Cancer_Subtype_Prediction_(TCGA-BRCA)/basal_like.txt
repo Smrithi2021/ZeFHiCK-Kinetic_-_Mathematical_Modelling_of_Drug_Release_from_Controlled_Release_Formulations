@@ -1,0 +1,12 @@
+Basal-like breast cancer is an aggressive subtype often overlapping with
+triple-negative breast cancer, lacking expression of ER, PR, and HER2.
+
+These tumors show high expression of basal cytokeratins such as KRT5 and
+KRT14, along with proliferation-related genes like MKI67 and cell cycle
+regulators.
+
+TCGA studies reveal that Basal-like tumors are genomically unstable and
+associated with poor prognosis and limited targeted treatment options.
+
+Chemotherapy remains the primary treatment, and research is ongoing to
+identify novel therapeutic targets for this subtype.

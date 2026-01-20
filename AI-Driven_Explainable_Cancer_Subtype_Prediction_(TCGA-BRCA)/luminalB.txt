@@ -1,0 +1,13 @@
+Luminal B breast cancer shares estrogen receptor positivity with Luminal A
+but is characterized by higher proliferation and poorer prognosis.
+These tumors often show increased expression of cell cycle–related genes.
+
+Key genes linked to Luminal B subtype include ESR1, CCNB1, MYC, and MKI67.
+Compared to Luminal A, Luminal B tumors exhibit higher grade and increased
+risk of recurrence.
+
+TCGA analyses indicate that Luminal B tumors show partial overlap with
+HER2 signaling and proliferative pathways, making them biologically more
+aggressive.
+
+Treatment strategies often include both endocrine therapy and chemotherapy.

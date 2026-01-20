@@ -1,0 +1,14 @@
+Luminal A breast cancer is characterized by strong estrogen receptor (ER)
+expression, low proliferation rates, and relatively favorable prognosis.
+These tumors typically respond well to endocrine therapy.
+
+Genes commonly associated with Luminal A subtype include ESR1, PGR, GATA3,
+and FOXA1. Expression of proliferation-related genes such as MKI67 is
+generally low compared to other subtypes.
+
+TCGA studies have shown that Luminal A tumors cluster distinctly based on
+transcriptomic profiles reflecting hormone-driven growth rather than
+growth factor signaling.
+
+Clinically, Luminal A tumors are associated with longer overall survival
+and lower recurrence rates.
