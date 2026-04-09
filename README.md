@@ -17,26 +17,26 @@ Statistics means the collection, analysis, interpretation, presentation, and org
 	
 **Model dependent method**
 These are based on different mathematical functions, which describe the dissolution profile. Once an appropriate function has been selected, the dissolution profiles are evaluated depending on the derived model parameters. The model dependent approaches included zero order, first order, and Higuchi, Hixson-Crowell, Korsmeyer-Peppas, Baker-Lonsdale, Weibull, Hopfenberg, Gompertz and regression models etc. 
-	**Zero order model** - Drug dissolution from dosage forms that do not disaggregate and release the drug slowly can be represented by the equation:
+**Zero order model** - Drug dissolution from dosage forms that do not disaggregate and release the drug slowly can be represented by the equation:
 Q_0- Q_t= K_0 t
 Rearrangement of equation yields
 Q_t= Q_0+ K_0 t
 Where Q_t is the amount of drug dissolved in time t, Q_0 is the initial amount of drug in the solution (most times, Q_0 = 0) and K_0 is the zero order release constant expressed in units of concentration/time. To study the release kinetics, data obtained from in vitro drug release studies were plotted as cumulative amount of drug released versus time.
 Application: This relationship can be used to describe the drug dissolution of several types of modified release pharmaceutical dosage forms, as in the case of some transdermal systems, as well as matrix tablets with low soluble drugs in coated forms, osmotic systems, etc.
-	**First order model** - This model has also been used to describe absorption and/or elimination of some drugs, although it is difficult to conceptualize this mechanism on a theoretical basis. The release of the drug which followed first order kinetics can be expressed by the equation:
+**First order model** - This model has also been used to describe absorption and/or elimination of some drugs, although it is difficult to conceptualize this mechanism on a theoretical basis. The release of the drug which followed first order kinetics can be expressed by the equation:
 dC/dt= -Kc
 Where K is the first order rate constant expressed as unit of time-1.
 Application: This relationship can be used to describe the drug dissolution in pharmaceutical dosage forms such as those containing water-soluble drugs in porous matrices.
-	**Higuchi model** - This model is based on the hypotheses that-
-	Initial drug concentration in the matrix is much higher than drug solubility
-	Drug diffusion takes place only in one dimension (edge effect must be negligible)
-	Drug particles are much smaller than system thickness
-	Matrix swelling and dissolution are negligible
-	Drug diffusivity is constant
-	Perfect sink conditions are always attained in the release environment.
+**Higuchi model** - This model is based on the hypotheses that-
+Initial drug concentration in the matrix is much higher than drug solubility
+Drug diffusion takes place only in one dimension (edge effect must be negligible)
+Drug particles are much smaller than system thickness
+Matrix swelling and dissolution are negligible
+Drug diffusivity is constant
+Perfect sink conditions are always attained in the release environment.
 Graph plotted as cumulative percentage drug release versus square root of time.
 Application: This relationship can be used to describe the drug dissolution from several types of modified release pharmaceutical dosage forms, as in the case of some transdermal systems and matrix tablets with water soluble drugs.
-	**Hixson-Crowell model** - Hixson and Crowell (1931) recognized that the particles’ regular area is proportional to the cube root of its volume.
+**Hixson-Crowell model** - Hixson and Crowell (1931) recognized that the particles’ regular area is proportional to the cube root of its volume.
 Application: This expression applies to pharmaceutical dosage form such as tablets, where the dissolution occurs in planes that are parallel to the drug surface if the tablet dimensions diminish proportionally, in such a manner that the initial geometrical form keeps constant all the time.
-	**Korsmeyer-Peppas model** - Korsmeyer et al. (1983) derived a simple relationship which described drug release from a polymeric system equation. To find out the mechanism of drug release, first 60% drug release data were fitted in Korsmeyer-Peppas model.
+**Korsmeyer-Peppas model** - Korsmeyer et al. (1983) derived a simple relationship which described drug release from a polymeric system equation. To find out the mechanism of drug release, first 60% drug release data were fitted in Korsmeyer-Peppas model.
 Drug release studies were plotted as log cumulative percentage drug release versus log time.
