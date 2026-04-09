@@ -1,5 +1,6 @@
 **KINETIC MODELING ON DRUG RELEASE FROM CONTROLLED DRUG DELIVERY SYSTEMS**
 
+
 **Introduction**
  The quantitative analysis of the values obtained in dissolution/release tests is easier when mathematical formulas that express the dissolution results as a function of some of the dosage forms characteristics are used. Drug dissolution from solid dosage forms has been described by kinetic models in which the dissolved amount of drug (Q) is a function of the test time, t or Q 5 f (t). Under certain circumstances in vitro dissolution can be used as a surrogate for the assessment of Bioequivalence. Several theories/kinetics models describe drug dissolution from immediate and modified release dosage forms. To compare dissolution profiles between two drug products model dependent (curve fitting), statistical analysis and model independent methods can be used. In this tool we focus on Model dependent methods.
  
